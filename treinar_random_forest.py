@@ -4,6 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import joblib
 
 df = pd.read_csv("healthcare-dataset-stroke-data.csv")
 
@@ -154,3 +155,7 @@ features = X.columns
 df_importancias = pd.DataFrame({"Feature": features, "Importância": importancias}).sort_values("Importância", ascending=False)
 print("\nIMPORTÂNCIA DAS FEATURES")
 print(df_importancias)
+
+output_path = "random_forest_model.pkl"
+joblib.dump(model, output_path)
+print(f"\nModelo salvo em: {output_path}")
