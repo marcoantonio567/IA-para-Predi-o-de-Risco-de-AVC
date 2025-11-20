@@ -148,18 +148,28 @@ Abaixo está um detalhamento completo de cada coluna presente no dataset.
 
 2. **Treinamento do modelo**
 
-   * Teste com diferentes algoritmos (RandomForest, XGBoost, Logistic Regression etc.)
+   * Teste com **3 algoritmos de regressão**
+   * **Modelo vencedor:** Random Forest (melhor desempenho nas métricas)
 
 3. **Validação**
 
-   * AUC-ROC
-   * Matriz de confusão
-   * Precision e Recall
-   * Feature Importance
+   * RMSE (Root Mean Squared Error)
+   * MAE (Mean Absolute Error)
+   * R² (Coeficiente de determinação)
+   * Importância das variáveis (Feature Importance)
 
 4. **Predição**
 
    * Dado um paciente → modelo retorna probabilidade (%) de AVC.
+
+---
+## 🧠 Modelos Avaliados
+
+- `RandomForestRegressor` — conjunto de árvores de decisão treinadas com amostras aleatórias. Captura relações não-lineares e interações entre variáveis, é robusto a outliers e funciona bem como modelo geral. Foi o vencedor nas métricas de regressão.
+- `GradientBoostingRegressor` — sequência de árvores que corrige erros do modelo anterior (boosting). Excelente para capturar padrões complexos com alta precisão, porém mais sensível a hiperparâmetros e risco de sobreajuste.
+- `LinearRegression` (baseline) — modelo linear que assume relação linear entre variáveis. Simples e interpretável, útil como referência; pode não capturar bem relações não-lineares.
+
+- Critério de escolha: comparamos `RMSE`, `MAE` e `R²`. O `RandomForestRegressor` obteve os melhores resultados neste conjunto de dados.
 
 ---
 
