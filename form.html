@@ -84,21 +84,24 @@
                                 </div>
                             </fieldset>
                         </div>
-
                         <div class="form-field">
-                            <div class="stack">
-                                <label for="tipo_trabalho">
-                                    Tipo de Trabalho <span class="required-badge">Obrigatório</span>
-                                    <select id="tipo_trabalho" name="tipo_trabalho" required>
-                                        <option value="" disabled selected>Selecione uma opção</option>
-                                        <option>Emprego Público</option>
-                                        <option>Privado</option>
-                                        <option>Empreendedor</option>
-                                        <option>Criança</option>
-                                        <option>Nunca trabalhou</option>
-                                    </select>
-                                </label>
-                            </div>
+                            <fieldset>
+                                <legend> Tipo de Trabalho <span class="required-badge">Obrigatório</span></legend>
+                                <div class="segmented">
+                                    <div class="wrap">
+                                        <input hidden class="rd-1" name="tipo_trabalho" id="wt-1" type="radio" value="Público" checked required />
+                                        <label style="--index: 0;" class="label" for="wt-1"><span>Público</span></label>
+                                        <input hidden class="rd-2" name="tipo_trabalho" id="wt-2" type="radio" value="Privado" />
+                                        <label style="--index: 1;" class="label" for="wt-2"><span>Privado</span></label>
+                                        <input hidden class="rd-3" name="tipo_trabalho" id="wt-3" type="radio" value="Empreendedor" />
+                                        <label style="--index: 2;" class="label" for="wt-3"><span>Empreendedor</span></label>
+                                        <input hidden class="rd-4" name="tipo_trabalho" id="wt-4" type="radio" value="Nunca trabalhou" />
+                                        <label style="--index: 3;" class="label" for="wt-4"><span>Nunca trabalhou</span></label>
+                                        <div class="bar"></div>
+                                        <div class="slidebar"></div>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
 
                         <div class="form-field">
