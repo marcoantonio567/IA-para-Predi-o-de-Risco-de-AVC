@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulário de Avaliação</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="custon_radio_button.css">
 </head>
 
 <body>
@@ -21,15 +22,16 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Gênero <span class="required-badge">Obrigatório</span></legend>
-                                <div class="control" role="radiogroup" aria-required="true"
-                                    aria-label="Seleção de gênero">
-                                    <label for="genero-m">
+                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Seleção de gênero">
+                                    <label class="liquid-radio variant-sky">
                                         <input id="genero-m" name="genero" type="radio" value="Masculino" required>
-                                        Masculino
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Masculino</span>
                                     </label>
-                                    <label for="genero-f">
+                                    <label class="liquid-radio variant-coral">
                                         <input id="genero-f" name="genero" type="radio" value="Feminino" required>
-                                        Feminino
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Feminino</span>
                                     </label>
                                 </div>
                             </fieldset>
@@ -49,17 +51,16 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Hipertensão <span class="required-badge">Obrigatório</span></legend>
-                                <div class="control" role="radiogroup" aria-required="true"
-                                    aria-label="Status de hipertensão">
-                                    <label for="hipertensao-sim">
-                                        <input id="hipertensao-sim" name="hipertensao" type="radio" value="Sim"
-                                            required>
-                                        Sim
+                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Status de hipertensão">
+                                    <label class="liquid-radio">
+                                        <input id="hipertensao-sim" name="hipertensao" type="radio" value="Sim" required>
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Sim</span>
                                     </label>
-                                    <label for="hipertensao-nao">
-                                        <input id="hipertensao-nao" name="hipertensao" type="radio" value="Não"
-                                            required>
-                                        Não
+                                    <label class="liquid-radio">
+                                        <input id="hipertensao-nao" name="hipertensao" type="radio" value="Não" required>
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Não</span>
                                     </label>
                                 </div>
                             </fieldset>
@@ -68,15 +69,16 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Doença Cardíaca <span class="required-badge">Obrigatório</span></legend>
-                                <div class="control" role="radiogroup" aria-required="true"
-                                    aria-label="Status de doença cardíaca">
-                                    <label for="doenca-sim">
+                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Status de doença cardíaca">
+                                    <label class="liquid-radio variant-mint">
                                         <input id="doenca-sim" name="doenca_cardiaca" type="radio" value="Sim" required>
-                                        Sim
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Sim</span>
                                     </label>
-                                    <label for="doenca-nao">
+                                    <label class="liquid-radio variant-coral">
                                         <input id="doenca-nao" name="doenca_cardiaca" type="radio" value="Não" required>
-                                        Não
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Não</span>
                                     </label>
                                 </div>
                             </fieldset>
@@ -101,17 +103,16 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Tipo de Residência <span class="required-badge">Obrigatório</span></legend>
-                                <div class="control" role="radiogroup" aria-required="true"
-                                    aria-label="Tipo de residência">
-                                    <label for="res-urbana">
-                                        <input id="res-urbana" name="tipo_residencia" type="radio" value="Urbana"
-                                            required>
-                                        Urbana
+                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Tipo de residência">
+                                    <label class="liquid-radio">
+                                        <input id="res-urbana" name="tipo_residencia" type="radio" value="Urbana" required>
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Urbana</span>
                                     </label>
-                                    <label for="res-rural">
-                                        <input id="res-rural" name="tipo_residencia" type="radio" value="Rural"
-                                            required>
-                                        Rural
+                                    <label class="liquid-radio">
+                                        <input id="res-rural" name="tipo_residencia" type="radio" value="Rural" required>
+                                        <span class="radio-visual"></span>
+                                        <span class="radio-label">Rural</span>
                                     </label>
                                 </div>
                             </fieldset>
