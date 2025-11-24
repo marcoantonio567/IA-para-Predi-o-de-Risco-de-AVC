@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulário de Avaliação</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="custon_radio_button.css">
-    <link rel="stylesheet" href="custom_list_options.css">
-    <link rel="stylesheet" href="custom_buttom.css">
-    <link rel="stylesheet" href="custom_background.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custon_radio_button.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_list_options.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_buttom.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_background.css' %}">
 </head>
 
 <body>
@@ -271,6 +272,6 @@
         </main>
     </div>
 </body>
-<script src="script.js"></script>
+<script src="{% static 'js\script.js' %}"></script>
 
 </html>
