@@ -7,6 +7,7 @@
     <title>Formulário de Avaliação</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="custon_radio_button.css">
+    <link rel="stylesheet" href="custom_list_options.css">
 </head>
 
 <body>
@@ -142,18 +143,23 @@
                         </div>
 
                         <div class="form-field">
-                            <div class="stack">
-                                <label for="status_fumo">
-                                    Status de Fumo <span class="required-badge">Obrigatório</span>
-                                    <select id="status_fumo" name="status_fumo" required>
-                                        <option value="" disabled selected>Selecione uma opção</option>
-                                        <option>Fuma atualmente</option>
-                                        <option>Fumava no passado</option>
-                                        <option>Nunca fumou</option>
-                                        <option>Não sei</option>
-                                    </select>
-                                </label>
-                            </div>
+                            <fieldset>
+                                <legend>Status de Fumo <span class="required-badge">Obrigatório</span></legend>
+                                <div class="segmented">
+                                    <div class="wrap">
+                                        <input hidden class="rd-1" name="status_fumo" id="sf-1" type="radio" value="Fuma atualmente" checked required />
+                                        <label style="--index: 0;" class="label" for="sf-1"><span>Fuma</span></label>
+                                        <input hidden class="rd-2" name="status_fumo" id="sf-2" type="radio" value="Fumava no passado" />
+                                        <label style="--index: 1;" class="label" for="sf-2"><span>Fumava</span></label>
+                                        <input hidden class="rd-3" name="status_fumo" id="sf-3" type="radio" value="Nunca fumou" />
+                                        <label style="--index: 2;" class="label" for="sf-3"><span>Nunca fumou</span></label>
+                                        <input hidden class="rd-4" name="status_fumo" id="sf-4" type="radio" value="Não sei" />
+                                        <label style="--index: 3;" class="label" for="sf-4"><span>Não sei</span></label>
+                                        <div class="bar"></div>
+                                        <div class="slidebar"></div>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </div>
 
                     </div>
