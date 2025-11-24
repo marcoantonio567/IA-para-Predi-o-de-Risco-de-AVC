@@ -23,3 +23,13 @@ form.addEventListener('submit', (e) => {
     numericFields.forEach(({ el, min, max, label }) => validateNumberField(el, min, max, label));
     if (!form.checkValidity()) { e.preventDefault(); form.reportValidity(); }
 });
+
+// add class 'entered' to number fields if they have a value
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.form-control input[type="number"]').forEach(function(el) {
+    if (el.value) el.classList.add('entered');
+    el.addEventListener('input', function() {
+      if (this.value) this.classList.add('entered');
+    });
+  });
+});
