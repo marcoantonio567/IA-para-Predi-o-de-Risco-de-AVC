@@ -76,3 +76,8 @@ main {
   color: lightblue;
   transform: translateY(-30px);
 }
+
+.form-grid {
+  display: grid;
+  gap: 20px;
+}
