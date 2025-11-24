@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="custon_radio_button.css">
     <link rel="stylesheet" href="custom_list_options.css">
+    <link rel="stylesheet" href="custom_buttom.css">
 </head>
 
 <body>
@@ -23,7 +24,8 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Gênero <span class="required-badge">Obrigatório</span></legend>
-                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Seleção de gênero">
+                                <div class="radio-group" role="radiogroup" aria-required="true"
+                                    aria-label="Seleção de gênero">
                                     <label class="liquid-radio variant-sky">
                                         <input id="genero-m" name="genero" type="radio" value="Masculino" required>
                                         <span class="radio-visual"></span>
@@ -41,9 +43,13 @@
                         <div class="form-field">
                             <div class="stack">
                                 <div class="form-control">
-                                    <input id="idade" name="idade" type="number" inputmode="numeric"
-                                        min="0" max="120" required>
-                                    <label for="idade"><span style="transition-delay:0ms">I</span><span style="transition-delay:50ms">d</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">d</span><span style="transition-delay:200ms">e</span></label>
+                                    <input id="idade" name="idade" type="number" inputmode="numeric" min="0" max="120"
+                                        required>
+                                    <label for="idade"><span style="transition-delay:0ms">I</span><span
+                                            style="transition-delay:50ms">d</span><span
+                                            style="transition-delay:100ms">a</span><span
+                                            style="transition-delay:150ms">d</span><span
+                                            style="transition-delay:200ms">e</span></label>
                                 </div>
                                 <span class="hint">Valor entre 0 e 120.</span>
                             </div>
@@ -52,14 +58,17 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Hipertensão <span class="required-badge">Obrigatório</span></legend>
-                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Status de hipertensão">
+                                <div class="radio-group" role="radiogroup" aria-required="true"
+                                    aria-label="Status de hipertensão">
                                     <label class="liquid-radio">
-                                        <input id="hipertensao-sim" name="hipertensao" type="radio" value="Sim" required>
+                                        <input id="hipertensao-sim" name="hipertensao" type="radio" value="Sim"
+                                            required>
                                         <span class="radio-visual"></span>
                                         <span class="radio-label">Sim</span>
                                     </label>
                                     <label class="liquid-radio">
-                                        <input id="hipertensao-nao" name="hipertensao" type="radio" value="Não" required>
+                                        <input id="hipertensao-nao" name="hipertensao" type="radio" value="Não"
+                                            required>
                                         <span class="radio-visual"></span>
                                         <span class="radio-label">Não</span>
                                     </label>
@@ -70,7 +79,8 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Doença Cardíaca <span class="required-badge">Obrigatório</span></legend>
-                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Status de doença cardíaca">
+                                <div class="radio-group" role="radiogroup" aria-required="true"
+                                    aria-label="Status de doença cardíaca">
                                     <label class="liquid-radio variant-mint">
                                         <input id="doenca-sim" name="doenca_cardiaca" type="radio" value="Sim" required>
                                         <span class="radio-visual"></span>
@@ -89,14 +99,20 @@
                                 <legend> Tipo de Trabalho <span class="required-badge">Obrigatório</span></legend>
                                 <div class="segmented">
                                     <div class="wrap">
-                                        <input hidden class="rd-1" name="tipo_trabalho" id="wt-1" type="radio" value="Público" checked required />
+                                        <input hidden class="rd-1" name="tipo_trabalho" id="wt-1" type="radio"
+                                            value="Público" checked required />
                                         <label style="--index: 0;" class="label" for="wt-1"><span>Público</span></label>
-                                        <input hidden class="rd-2" name="tipo_trabalho" id="wt-2" type="radio" value="Privado" />
+                                        <input hidden class="rd-2" name="tipo_trabalho" id="wt-2" type="radio"
+                                            value="Privado" />
                                         <label style="--index: 1;" class="label" for="wt-2"><span>Privado</span></label>
-                                        <input hidden class="rd-3" name="tipo_trabalho" id="wt-3" type="radio" value="Empreendedor" />
-                                        <label style="--index: 2;" class="label" for="wt-3"><span>Empreendedor</span></label>
-                                        <input hidden class="rd-4" name="tipo_trabalho" id="wt-4" type="radio" value="Nunca trabalhou" />
-                                        <label style="--index: 3;" class="label" for="wt-4"><span>Nunca trabalhou</span></label>
+                                        <input hidden class="rd-3" name="tipo_trabalho" id="wt-3" type="radio"
+                                            value="Empreendedor" />
+                                        <label style="--index: 2;" class="label"
+                                            for="wt-3"><span>Empreendedor</span></label>
+                                        <input hidden class="rd-4" name="tipo_trabalho" id="wt-4" type="radio"
+                                            value="Nunca trabalhou" />
+                                        <label style="--index: 3;" class="label" for="wt-4"><span>Nunca
+                                                trabalhou</span></label>
                                         <div class="bar"></div>
                                         <div class="slidebar"></div>
                                     </div>
@@ -107,14 +123,17 @@
                         <div class="form-field">
                             <fieldset>
                                 <legend>Tipo de Residência <span class="required-badge">Obrigatório</span></legend>
-                                <div class="radio-group" role="radiogroup" aria-required="true" aria-label="Tipo de residência">
+                                <div class="radio-group" role="radiogroup" aria-required="true"
+                                    aria-label="Tipo de residência">
                                     <label class="liquid-radio">
-                                        <input id="res-urbana" name="tipo_residencia" type="radio" value="Urbana" required>
+                                        <input id="res-urbana" name="tipo_residencia" type="radio" value="Urbana"
+                                            required>
                                         <span class="radio-visual"></span>
                                         <span class="radio-label">Urbana</span>
                                     </label>
                                     <label class="liquid-radio">
-                                        <input id="res-rural" name="tipo_residencia" type="radio" value="Rural" required>
+                                        <input id="res-rural" name="tipo_residencia" type="radio" value="Rural"
+                                            required>
                                         <span class="radio-visual"></span>
                                         <span class="radio-label">Rural</span>
                                     </label>
@@ -126,9 +145,34 @@
                             <div class="stack">
                                 <div class="form-control">
                                     <input id="nivel_glicose" name="nivel_glicose" type="number" inputmode="decimal"
-                                        min="0" max="300" step="0.1"
-                                        required>
-                                    <label for="nivel_glicose"><span style="transition-delay:0ms">N</span><span style="transition-delay:50ms">í</span><span style="transition-delay:100ms">v</span><span style="transition-delay:150ms">e</span><span style="transition-delay:200ms">l</span><span style="transition-delay:250ms"> </span><span style="transition-delay:300ms">M</span><span style="transition-delay:350ms">é</span><span style="transition-delay:400ms">d</span><span style="transition-delay:450ms">i</span><span style="transition-delay:500ms">o</span><span style="transition-delay:550ms"> </span><span style="transition-delay:600ms">d</span><span style="transition-delay:650ms">e</span><span style="transition-delay:700ms"> </span><span style="transition-delay:750ms">G</span><span style="transition-delay:800ms">l</span><span style="transition-delay:850ms">i</span><span style="transition-delay:900ms">c</span><span style="transition-delay:950ms">o</span><span style="transition-delay:1000ms">s</span><span style="transition-delay:1050ms">e</span><span style="transition-delay:1100ms"> </span><span style="transition-delay:1150ms">(</span><span style="transition-delay:1200ms">m</span><span style="transition-delay:1250ms">g</span><span style="transition-delay:1300ms">/</span><span style="transition-delay:1350ms">D</span><span style="transition-delay:1400ms">L</span><span style="transition-delay:1450ms">)</span></label>
+                                        min="0" max="300" step="0.1" required>
+                                    <label for="nivel_glicose"><span style="transition-delay:0ms">N</span><span
+                                            style="transition-delay:50ms">í</span><span
+                                            style="transition-delay:100ms">v</span><span
+                                            style="transition-delay:150ms">e</span><span
+                                            style="transition-delay:200ms">l</span><span style="transition-delay:250ms">
+                                        </span><span style="transition-delay:300ms">M</span><span
+                                            style="transition-delay:350ms">é</span><span
+                                            style="transition-delay:400ms">d</span><span
+                                            style="transition-delay:450ms">i</span><span
+                                            style="transition-delay:500ms">o</span><span style="transition-delay:550ms">
+                                        </span><span style="transition-delay:600ms">d</span><span
+                                            style="transition-delay:650ms">e</span><span style="transition-delay:700ms">
+                                        </span><span style="transition-delay:750ms">G</span><span
+                                            style="transition-delay:800ms">l</span><span
+                                            style="transition-delay:850ms">i</span><span
+                                            style="transition-delay:900ms">c</span><span
+                                            style="transition-delay:950ms">o</span><span
+                                            style="transition-delay:1000ms">s</span><span
+                                            style="transition-delay:1050ms">e</span><span
+                                            style="transition-delay:1100ms"> </span><span
+                                            style="transition-delay:1150ms">(</span><span
+                                            style="transition-delay:1200ms">m</span><span
+                                            style="transition-delay:1250ms">g</span><span
+                                            style="transition-delay:1300ms">/</span><span
+                                            style="transition-delay:1350ms">D</span><span
+                                            style="transition-delay:1400ms">L</span><span
+                                            style="transition-delay:1450ms">)</span></label>
                                 </div>
                                 <span class="hint">Valor entre 0 e 300, com passo 0,1.</span>
                             </div>
@@ -137,9 +181,35 @@
                         <div class="form-field">
                             <div class="stack">
                                 <div class="form-control">
-                                    <input id="imc" name="imc" type="number" inputmode="decimal"
-                                     min="0" max="100" step="0.1" required>
-                                    <label for="imc"><span style="transition-delay:0ms">I</span><span style="transition-delay:50ms">M</span><span style="transition-delay:100ms">C</span><span style="transition-delay:150ms"> </span><span style="transition-delay:200ms">(</span><span style="transition-delay:250ms">Í</span><span style="transition-delay:300ms">n</span><span style="transition-delay:350ms">d</span><span style="transition-delay:400ms">i</span><span style="transition-delay:450ms">c</span><span style="transition-delay:500ms">e</span><span style="transition-delay:550ms"> </span><span style="transition-delay:600ms">d</span><span style="transition-delay:650ms">e</span><span style="transition-delay:700ms"> </span><span style="transition-delay:750ms">M</span><span style="transition-delay:800ms">a</span><span style="transition-delay:850ms">s</span><span style="transition-delay:900ms">s</span><span style="transition-delay:950ms">a</span><span style="transition-delay:1000ms"> </span><span style="transition-delay:1050ms">C</span><span style="transition-delay:1100ms">o</span><span style="transition-delay:1150ms">r</span><span style="transition-delay:1200ms">p</span><span style="transition-delay:1250ms">o</span><span style="transition-delay:1300ms">r</span><span style="transition-delay:1350ms">a</span><span style="transition-delay:1400ms">l</span><span style="transition-delay:1450ms">)</span></label>
+                                    <input id="imc" name="imc" type="number" inputmode="decimal" min="0" max="100"
+                                        step="0.1" required>
+                                    <label for="imc"><span style="transition-delay:0ms">I</span><span
+                                            style="transition-delay:50ms">M</span><span
+                                            style="transition-delay:100ms">C</span><span style="transition-delay:150ms">
+                                        </span><span style="transition-delay:200ms">(</span><span
+                                            style="transition-delay:250ms">Í</span><span
+                                            style="transition-delay:300ms">n</span><span
+                                            style="transition-delay:350ms">d</span><span
+                                            style="transition-delay:400ms">i</span><span
+                                            style="transition-delay:450ms">c</span><span
+                                            style="transition-delay:500ms">e</span><span style="transition-delay:550ms">
+                                        </span><span style="transition-delay:600ms">d</span><span
+                                            style="transition-delay:650ms">e</span><span style="transition-delay:700ms">
+                                        </span><span style="transition-delay:750ms">M</span><span
+                                            style="transition-delay:800ms">a</span><span
+                                            style="transition-delay:850ms">s</span><span
+                                            style="transition-delay:900ms">s</span><span
+                                            style="transition-delay:950ms">a</span><span
+                                            style="transition-delay:1000ms"> </span><span
+                                            style="transition-delay:1050ms">C</span><span
+                                            style="transition-delay:1100ms">o</span><span
+                                            style="transition-delay:1150ms">r</span><span
+                                            style="transition-delay:1200ms">p</span><span
+                                            style="transition-delay:1250ms">o</span><span
+                                            style="transition-delay:1300ms">r</span><span
+                                            style="transition-delay:1350ms">a</span><span
+                                            style="transition-delay:1400ms">l</span><span
+                                            style="transition-delay:1450ms">)</span></label>
                                 </div>
                                 <span class="hint">Valor entre 0 e 100, com passo 0,1.</span>
                             </div>
@@ -150,13 +220,18 @@
                                 <legend>Status de Fumo <span class="required-badge">Obrigatório</span></legend>
                                 <div class="segmented">
                                     <div class="wrap">
-                                        <input hidden class="rd-1" name="status_fumo" id="sf-1" type="radio" value="Fuma atualmente" checked required />
+                                        <input hidden class="rd-1" name="status_fumo" id="sf-1" type="radio"
+                                            value="Fuma atualmente" checked required />
                                         <label style="--index: 0;" class="label" for="sf-1"><span>Fuma</span></label>
-                                        <input hidden class="rd-2" name="status_fumo" id="sf-2" type="radio" value="Fumava no passado" />
+                                        <input hidden class="rd-2" name="status_fumo" id="sf-2" type="radio"
+                                            value="Fumava no passado" />
                                         <label style="--index: 1;" class="label" for="sf-2"><span>Fumava</span></label>
-                                        <input hidden class="rd-3" name="status_fumo" id="sf-3" type="radio" value="Nunca fumou" />
-                                        <label style="--index: 2;" class="label" for="sf-3"><span>Nunca fumou</span></label>
-                                        <input hidden class="rd-4" name="status_fumo" id="sf-4" type="radio" value="Não sei" />
+                                        <input hidden class="rd-3" name="status_fumo" id="sf-3" type="radio"
+                                            value="Nunca fumou" />
+                                        <label style="--index: 2;" class="label" for="sf-3"><span>Nunca
+                                                fumou</span></label>
+                                        <input hidden class="rd-4" name="status_fumo" id="sf-4" type="radio"
+                                            value="Não sei" />
                                         <label style="--index: 3;" class="label" for="sf-4"><span>Não sei</span></label>
                                         <div class="bar"></div>
                                         <div class="slidebar"></div>
@@ -166,9 +241,13 @@
                         </div>
 
                     </div>
-                    <div class="actions">
-                        <button type="submit">Enviar</button>
-                    </div>
+                    <button class="button" type="submit">
+                        <div class="button-outer">
+                            <div class="button-inner">
+                                <span>enviar</span>
+                            </div>
+                        </div>
+                    </button>
                 </form>
             </div>
         </section>

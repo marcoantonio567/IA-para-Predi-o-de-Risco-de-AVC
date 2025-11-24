@@ -82,3 +82,8 @@ main {
   display: grid;
   gap: 20px;
 }
+
+.title,
+.subtitle {
+  text-align: center;
+}
