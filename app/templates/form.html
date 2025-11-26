@@ -23,6 +23,7 @@
                     <h1 id="form-title" class="title">Avaliação de Risco — Dados do Paciente</h1>
                     <p class="subtitle">Preencha todos os campos obrigatórios para prosseguir.</p>
                     <form id="avaliacao-risco" method="post" novalidate>
+                        {% csrf_token %}
                         <div class="form-grid" role="group" aria-describedby="form-desc">
                             <span id="form-desc" class="hint">Todos os campos são obrigatórios.</span>
 
@@ -266,6 +267,11 @@
                                 </div>
                             </div>
                         </button>
+                        {% if risco_percent is not None %}
+                        <p class="subtitle">Risco estimado de AVC: {{ risco_percent|floatformat:2 }}%</p>
+                        {% elif erro_msg %}
+                        <p class="subtitle">{{ erro_msg }}</p>
+                        {% endif %}
                     </form>
                 </div>
             </section>
