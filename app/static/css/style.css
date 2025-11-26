@@ -50,6 +50,15 @@ main {
   color: #fff;
 }
 
+.form-control input::placeholder,
+.form-control input::-webkit-input-placeholder,
+.form-control input::-moz-placeholder,
+.form-control input:-ms-input-placeholder,
+.form-control input::-ms-input-placeholder {
+  color: #334155;
+  opacity: 1;
+}
+
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
@@ -67,7 +76,7 @@ main {
   display: inline-block;
   font-size: 18px;
   min-width: 5px;
-  color: #fff;
+  color: #334155;
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -86,4 +95,24 @@ main {
 .title,
 .subtitle {
   text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  color: #1f2937;
+}
+
+.title {
+  color: #0f172a;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.subtitle {
+  color: #334155;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }

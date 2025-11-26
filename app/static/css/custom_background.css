@@ -1,27 +1,69 @@
-/* From Uiverse.io by csemszepp */ 
-html, body {
-  height: 100%;
+body {
   margin: 0;
-}
-.custom-background {
-  width: 100%;
+  padding: 0;
   min-height: 100vh;
-  --s: 200px; /* control the size */
-  --c1: #1d1d1d;
-  --c2: #4e4f51;
-  --c3: #3c3c3c;
+  background: linear-gradient(135deg, #ffe8f3, #d9f3ff);
+}
 
-  background: repeating-conic-gradient(
-        from 30deg,
-        #0000 0 120deg,
-        var(--c3) 0 180deg
-      )
-      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-    repeating-conic-gradient(
-      from 30deg,
-      var(--c1) 0 60deg,
-      var(--c2) 0 120deg,
-      var(--c3) 0 180deg
-    );
-  background-size: var(--s) calc(var(--s) * 0.577);
+.custom-background {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+}
+
+.custom-background::before,
+.custom-background::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200vw;
+  height: 200vh;
+  background: conic-gradient(
+    from 0deg,
+    #ff9aa2,
+    #ffb7b2,
+    #ffdac1,
+    #e2f0cb,
+    #a2e4ff,
+    #c9afff,
+    #ffb7b2,
+    #ff9aa2
+  );
+  transform: translate(-50%, -50%);
+  animation: rotate 8s linear infinite;
+  filter: blur(50px);
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.custom-background::after {
+  width: 180vw;
+  height: 180vh;
+  animation: rotate-reverse 10s linear infinite;
+  opacity: 0.6;
+}
+
+.custom-background > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
