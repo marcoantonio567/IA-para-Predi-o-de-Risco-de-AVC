@@ -82,7 +82,7 @@ def index(request):
             pred = float(model.predict([features])[0])
             pred = min(max(pred, 0.0), 1.0)
             risco = pred * 100.0
-            return render(request, 'form.html', {'risco_percent': risco})
+            return render(request, 'resultado.html', {'risco_percent': risco})
         except Exception:
-            return render(request, 'form.html', {'risco_percent': None, 'erro_msg': 'Não foi possível calcular o risco.'})
+            return render(request, 'resultado.html', {'risco_percent': None, 'erro_msg': 'Não foi possível calcular o risco.'})
     return render(request, 'form.html')

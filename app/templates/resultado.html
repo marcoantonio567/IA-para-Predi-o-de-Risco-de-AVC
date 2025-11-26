@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resultado de Risco</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custon_radio_button.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_list_options.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_buttom.css' %}">
+    <link rel="stylesheet" href="{% static 'css\custom_background.css' %}">
+</head>
+<body>
+    <div class="custom-background">
+        <main>
+            <section class="container">
+                <div class="card" aria-labelledby="resultado-title">
+                    <h1 id="resultado-title" class="title">Resultado da Avaliação de Risco</h1>
+                    {% if risco_percent is not None %}
+                        <p class="subtitle">Risco estimado de AVC: {{ risco_percent|floatformat:2 }}%</p>
+                    {% elif erro_msg %}
+                        <p class="subtitle">{{ erro_msg }}</p>
+                    {% else %}
+                        <p class="subtitle">Nenhum resultado disponível.</p>
+                    {% endif %}
+                    <a href="{% url 'index' %}" class="button" style="text-decoration:none">
+                        <div class="button-outer">
+                            <div class="button-inner">
+                                <span>voltar</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="{% static 'js\script.js' %}"></script>
+</body>
+</html>
