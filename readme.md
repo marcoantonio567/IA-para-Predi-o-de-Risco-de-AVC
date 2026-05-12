@@ -1,206 +1,202 @@
+# 🧠 Stroke Prediction – AI for Stroke Risk Prediction
 
-# 🧠 Stroke Prediction – IA para Predição de Risco de AVC
+This project uses **Machine Learning** to predict the **probability of a person suffering a stroke** based on clinical, demographic, and behavioral characteristics.
 
-Este projeto utiliza **Machine Learning** para prever a **probabilidade de uma pessoa sofrer um Acidente Vascular Cerebral (AVC)** com base em características clínicas, demográficas e comportamentais.
-
-O dataset utilizado é o **Stroke Prediction Dataset** disponível no Kaggle.
-
----
-
-## 🎯 Objetivo do Projeto
-
-O objetivo principal deste projeto é **treinar um modelo de IA capaz de estimar a probabilidade (%) de um indivíduo ter AVC**, utilizando dados estruturados que incluem fatores de risco clássicos como idade, hipertensão, histórico cardíaco, glicemia, entre outros.
-
-A meta é:
-
-* Identificar os **fatores mais relevantes** para o risco de AVC
-* Criar um **modelo preditivo eficiente e interpretável**
-* Utilizar métricas como **AUC-ROC, Recall, Precision e F1-score**
-* Permitir que profissionais de saúde ou sistemas de triagem façam **avaliação de risco automatizada**
+The dataset used is the **Stroke Prediction Dataset** available on Kaggle.
 
 ---
 
-## 📊 Descrição das Colunas do Dataset
+## 🎯 Project Objective
 
-Abaixo está um detalhamento completo de cada coluna presente no dataset.
+The main objective of this project is to **train an AI model capable of estimating the probability (%) of an individual having a stroke**, using structured data that includes classic risk factors such as age, hypertension, cardiac history, blood glucose, among others.
+
+The goal is:
+
+* To identify the **most relevant factors** for stroke risk
+* To create an **efficient and interpretable predictive model**
+* To use metrics such as **AUC-ROC, Recall, Precision, and F1-score**
+* To allow healthcare professionals or triage systems to perform **automated risk assessment**
+
+---
+
+## 📊 Dataset Column Descriptions
+
+Below is a complete breakdown of each column in the dataset.
 
 ### **1. id**
 
-* **Descrição:** Identificador único de cada paciente.
-* **Uso:** Apenas referência.
-* **Importância para o modelo:** Geralmente descartado, pois não possui valor preditivo.
+* **Description:** Unique identifier for each patient.
+
+* **Use:** Reference only.
+
+* **Importance to the model:** Generally discarded, as it has no predictive value.
 
 ---
 
 ### **2. gender**
 
-* **Descrição:** Sexo biológico do paciente.
-* **Valores possíveis:** `"Male"`, `"Female"`, `"Other"`.
-* **Relevância:** Pode ter influência no risco de AVC devido a fatores fisiológicos e epidemiológicos.
+* **Description:** Biological sex of the patient.
+
+* **Possible values:** `"Male"`, `"Female"`, `"Other"`.
+
+* **Relevance:** May influence stroke risk due to physiological and epidemiological factors.
 
 ---
 
 ### **3. age**
 
-* **Descrição:** Idade do paciente (valor numérico).
-* **Relevância:** É um dos fatores mais importantes — risco de AVC aumenta drasticamente com a idade.
+* **Description:** Patient's age (numerical value).
+
+* **Relevance:** It is one of the most important factors — stroke risk increases dramatically with age.
 
 ---
 
 ### **4. hypertension**
 
-* **Descrição:** Indica se o paciente tem hipertensão.
-* **Valores:**
+* **Description:** Indicates whether the patient has hypertension.
 
-  * **0** = não hipertenso
-  * **1** = hipertenso
-* **Relevância:** Hipertensão é um dos maiores fatores de risco para AVC.
+* **Values:**
+
+* **0** = not hypertensive
+* **1** = hypertensive
+* **Relevance:** Hypertension is one of the biggest risk factors for stroke.
 
 ---
 
 ### **5. heart_disease**
 
-* **Descrição:** Indica presença de doenças cardíacas.
-* **Valores:**
+* **Description:** Indicates the presence of heart disease.
 
-  * **0** = sem doenças
-  * **1** = possui doença cardíaca
-* **Relevância:** Altamente relevante, pois doenças cardiovasculares estão diretamente associadas ao risco de AVC.
+* **Values:**
 
----
+* **0** = no heart disease
+
+* **1** = has heart disease
+* **Relevance:** Highly relevant, as cardiovascular diseases are directly associated with stroke risk. ---
 
 ### **6. ever_married**
 
-* **Descrição:** Indica se a pessoa já foi casada.
-* **Valores:** `"Yes"` ou `"No"`
-* **Relevância:** Baixa. Geralmente não possui relação direta com AVC e pode ser descartada no modelo.
+* **Description:** Indicates whether the person has ever been married.
 
----
+* **Values:** `"Yes"` or `"No"`
+* **Relevance:** Low. Generally not directly related to stroke and can be discarded in the model.
+
+--
 
 ### **7. work_type**
 
-* **Descrição:** Tipo de ocupação do paciente.
-* **Valores possíveis:**
+* **Description:** Patient's occupation type.
 
-  * `"Private"`
-  * `"Self-employed"`
-  * `"Govt_job"`
-  * `"Children"`
-  * `"Never_worked"`
-* **Relevância:** Pode refletir estilo de vida e rotina — moderadamente relevante.
+* **Possible values:**
 
----
+* `"Private"`
+
+* `"Self-employed"`
+
+* `"Govt_job"`
+
+* `"Children"`
+
+* `"Never_worked"`
+
+* **Relevance:** May reflect lifestyle and routine — moderately relevant.
+
+--
 
 ### **8. Residence_type**
 
-* **Descrição:** Local de residência.
-* **Valores:** `"Urban"` ou `"Rural"`
-* **Relevância:** Pode indicar acesso a serviços de saúde e perfil de risco ambiental.
+* **Description:** Place of residence.
+
+* **Values:** `"Urban"` or `"Rural"`
+* **Relevance:** May indicate access to health services and environmental risk profile.
 
 ---
 
 ### **9. avg_glucose_level**
 
-* **Descrição:** Nível médio de glicose no sangue.
-* **Relevância:** Altamente relevante — valores elevados indicam risco de diabetes, que aumenta chances de AVC.
+* **Description:** Average blood glucose level.
+
+* **Relevance:** Highly relevant — elevated values ​​indicate a risk of diabetes, which increases the chances of stroke.
 
 ---
 
 ### **10. bmi**
 
-* **Descrição:** Índice de Massa Corporal (Body Mass Index).
-* **Relevância:** Representa obesidade, sedentarismo e estado metabólico — fatores relevantes para AVC.
+* **Description:** Body Mass Index.
+
+* **Relevance:** Represents obesity, sedentary lifestyle, and metabolic status — factors relevant to stroke.
 
 ---
 
 ### **11. smoking_status**
 
-* **Descrição:** Situação tabagística do paciente.
-* **Valores:**
+* **Description:** Patient's smoking status.
 
-  * `"formerly smoked"`
-  * `"never smoked"`
-  * `"smokes"`
-  * `"Unknown"`
-* **Relevância:** Extremamente importante. O tabagismo é um forte fator de risco.
+* **Values:**
 
----
+* `"formerly smoked"`
 
-### **12. stroke**
+* `"never smoked"`
 
-* **Descrição:** Indica se o paciente já sofreu AVC.
-* **Valores:**
+* `"smokes"`
 
-  * **0** = não teve AVC
-  * **1** = teve AVC
-* **Uso:** **É a variável alvo (target)** do modelo de IA.
+* `"Unknown"`
+* **Relevance:** Extremely important. Smoking is a strong risk factor.
 
 ---
 
-## 🧪 Pipeline do Projeto
+### **12. Stroke**
 
-1. **Limpeza dos dados**
+* **Description:** Indicates whether the patient has suffered a stroke.
 
-   * Remover/ajustar valores faltantes
-   * Tratar categorias
-   * Remover outliers (ex.: BMI)
-   * Analisar correlações
+* **Values:**
 
-2. **Treinamento do modelo**
+* **0** = has not had a stroke
 
-   * Teste com **3 algoritmos de regressão**
-   * **Modelo vencedor:** Random Forest (melhor desempenho nas métricas)
+* **1** = has had a stroke
 
-3. **Validação**
-
-   * RMSE (Root Mean Squared Error)
-   * MAE (Mean Absolute Error)
-   * R² (Coeficiente de determinação)
-   * Importância das variáveis (Feature Importance)
-
-4. **Predição**
-
-   * Dado um paciente → modelo retorna probabilidade (%) de AVC.
-
----
-## 🧠 Modelos Avaliados
-
-- `RandomForestRegressor` — conjunto de árvores de decisão treinadas com amostras aleatórias. Captura relações não-lineares e interações entre variáveis, é robusto a outliers e funciona bem como modelo geral. Foi o vencedor nas métricas de regressão.
-- `GradientBoostingRegressor` — sequência de árvores que corrige erros do modelo anterior (boosting). Excelente para capturar padrões complexos com alta precisão, porém mais sensível a hiperparâmetros e risco de sobreajuste.
-- `LinearRegression` (baseline) — modelo linear que assume relação linear entre variáveis. Simples e interpretável, útil como referência; pode não capturar bem relações não-lineares.
-
-- Critério de escolha: comparamos `RMSE`, `MAE` e `R²`. O `RandomForestRegressor` obteve os melhores resultados neste conjunto de dados.
+* **Use:** **It is the target variable** of the AI ​​model.
 
 ---
 
-## 📦 Tecnologias usadas
+## 🧪 Project Pipeline
 
-* Python
-* Pandas
-* Scikit-Learn
-* Matplotlib / Seaborn
-* Jupyter Notebook
-* (Opcional) Flask / FastAPI para API de predição
-* (Opcional) Streamlit para interface web
+1. **Data Cleaning**
 
+* Remove/adjust missing values
+
+* Handle categories
+
+* Remove outliers (e.g., BMI)
+
+* Analyze correlations
+
+2. **Model Training**
+
+* Test with **3 regression algorithms**
+
+* **Winning model:** Random Forest (best performance in metrics)
+
+3. **Validation**
+
+* RMSE (Root Mean Squared Error)
+
+* MAE (Mean Absolute Error)
+
+* R² (Coefficient of determination)
+
+* Feature Importance
+
+4. **Prediction**
+
+* Given a patient → model returns probability (%) of stroke.
 ---
+### 🧠 Evaluated Models
 
-## 📈 Resultado Esperado
+- `RandomForestRegressor` — a set of decision trees trained with random samples. Captures non-linear relationships and interactions between variables, is robust to outliers, and works well as a general model. It was the winner in regression metrics.
 
-Ao final, o modelo será capaz de:
+- GradientBoostingRegressor — a sequence of trees that corrects errors from the previous model (boosting). Excellent for capturing complex patterns with high precision, but more sensitive to hyperparameters and the risk of overfitting.
 
-* Receber dados clínicos e demográficos
-* Processar automaticamente
-* Retornar:
-  → **Probabilidade de AVC (%)**
-  → **Variáveis mais importantes para o risco individual**
+- LinearRegression (baseline) — a linear model that assumes a linear relationship between variables. Simple and interpretable, useful as a reference; may not capture non-linear relationships well.
 
----
-
-## 📬 Como Executar
-
-```bash
-pip install -r requirements.txt
-jupyter notebook
-```
-
+- Selection criterion: c
